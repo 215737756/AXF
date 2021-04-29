@@ -10,4 +10,7 @@ urlpatterns = [
     url(r'^matchpassword/', views.matchpassword, name='matchpassword'),
     # 测试 Email
     url(r'^testemail/', views.testemail, name='testemail'),
+    url(r'^activate/', views.activate, name='activate'),
+
+
 ]

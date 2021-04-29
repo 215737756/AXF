@@ -20,7 +20,6 @@ $(function () {
 
         } else {
             $('#nameinfo').html('请输入以字母开头3-8位字符').css('color', 'red')
-
         }
     })
     // 输入密码
@@ -46,14 +45,22 @@ $(function () {
         if (b) {
             $('#password_alert1').html('').css('color', 'green')
             var password = $('#exampleInputPassword').val()
-            if(password1 != password){
+            if (password1 != password) {
                 $('#password_alert1').html('两次密码不一致').css('color', 'red')
             }
         } else {
             $('#password_alert1').html('请输入密码6-10位').css('color', 'red')
         }
     })
+        // 邮箱校验
+        $('#exampleInputPassword2').blur(function () {
 
+            var email = $('#exampleInputPassword2').val()
+            var reg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+            var b = reg.test(email)
+            if (b==false) {
+                $('#email').html('邮箱格式错误').css('color','red')
+            }
+        })
+    })
 
-
-})
