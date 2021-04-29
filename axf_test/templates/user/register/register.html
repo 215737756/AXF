@@ -1,0 +1,55 @@
+{% extends 'base_user.html' %}
+{% load static %}
+
+{% block title %}
+    {{ block.super }}
+    注册
+{% endblock %}
+
+
+{% block ext_js %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'user/js/register.js' %}"></script>
+{% endblock %}
+
+
+
+{% block content %}
+    {{ block.super }}
+
+    <div class="container">
+        <form>
+            <div class="form-group"><label for="exampleInputEmail1">用户名</label><input type="text" class="form-control"
+                                                                                      id="username_input"
+                                                                                      placeholder="请输入账号">
+                <span id="nameinfo"></span>
+            </div>
+
+            <div class="form-group"><label for="exampleInputPassword1">密码</label><input type="password"
+                                                                                        class="form-control"
+                                                                                        id="exampleInputPassword"
+                                                                                        placeholder="请输入密码">
+                <span id="password_alert"></span>
+            </div>
+
+            <div class="form-group1">
+                <label for="exampleInputPassword1">确认密码</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请再次输入密码">
+                <span id="password_alert1"></span>
+            </div>
+
+            <div class="form-group2">
+                <label for="exampleInputPassword1">邮箱</label>
+                <input type="email" class="form-control" id="exampleInputPassword1" placeholder="请输入邮箱">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputFile">上传头像</label>
+                <input type="file" id="exampleInputFile">
+                <div class="checkbox"></div>
+
+                <button type="submit" class="btn btn-success" style="width: 100%">提交</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

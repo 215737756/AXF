@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>swiper的使用</title>
+    <link rel="stylesheet" href="../static/axf/main/home/css/swiper.css">
+    <style>
+        /* 设置大小，根绝需要决定大小 */
+        .swiper-container {    
+            width: 600px;
+            height: 400px;
+        }  
+ 
+        /* 分页器样式 */
+        .pagination {
+            position: absolute;
+            z-index: 20;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+ 
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #555;
+            margin: 0 5px;
+            opacity: 0.8;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../static/axf/main/imgs/adv01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../static/axf/main/imgs/adv02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../static/axf/main/imgs/adv04.jpg" alt="">
+            </div>
+        </div>
+ 
+        <!-- 如果需要分页器 -->
+        <div class="pagination"></div>
+    </div>
+ 
+    <script src="../static/axf/main/home/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            loop: true, // 循环模式选项
+            speed: 300,
+            autoplay: 3000,  //间隔时间
+            
+            // 如果需要分页器
+            pagination : '.pagination'
+        })        
+    </script>
+</body>
+</html>
+————————————————
+版权声明：本文为CSDN博主「Running_96」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/banana960531/article/details/86299846
