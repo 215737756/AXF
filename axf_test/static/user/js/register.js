@@ -22,7 +22,6 @@ $(function () {
             $('#nameinfo').html('请输入以字母开头3-8位字符').css('color', 'red')
 
         }
-
     })
     // 输入密码
     var password = $('#exampleInputPassword').blur(function () {
@@ -30,12 +29,9 @@ $(function () {
 
         var reg = /^.{6,10}$/
         var b = reg.test(password)
-        // console.log(password)
-        // console.log(b)
 
         if (b) {
             $('#password_alert').html('').css('color', 'green')
-
         } else {
             $('#password_alert').html('请输入密码6-10位').css('color', 'red')
         }
@@ -48,14 +44,16 @@ $(function () {
         var reg = /^.{6,10}$/
         var b = reg.test(password1)
         if (b) {
-            $.getJSON(
-                ''
-            )
             $('#password_alert1').html('').css('color', 'green')
+            var password = $('#exampleInputPassword').val()
+            if(password1 != password){
+                $('#password_alert1').html('两次密码不一致').css('color', 'red')
+            }
         } else {
             $('#password_alert1').html('请输入密码6-10位').css('color', 'red')
         }
     })
+
 
 
 })

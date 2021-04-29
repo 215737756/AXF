@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'AXF_shop',
         'USER': 'tlc',
         'PASSWORD': 'Mysql666!',
-        'HOST': '172.16.11.61',
+        'HOST': '192.168.28.61',
         'PORT': '3306',
         'TEST': {
             'NAME': 'AXF_test'
@@ -131,3 +131,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+# 邮箱的服务器地址
+EMAIL_HOST = 'smtp.163.com'
+# smtp.163.com 默认端口号就是25 可写可不写 465
+EMAIL_USE_SSL = True  # 阿里云将25端口占用了，将端口修改为465，EMAIL_USE_SSL 改为True
+EMAIL_PORT = 465
+# 发送者的邮箱
+EMAIL_HOST_USER = 'TianLiuChun@163.com'
+# 授权码  授权码不代表密码
+EMAIL_HOST_PASSWORD = 'FOHZKVWNPOHEQZRT'
