@@ -34,7 +34,7 @@ class AxfMainShow(Base_axf):
     img1 = models.CharField(max_length=128)
     childcid1 =models.IntegerField()
     productid1 = models.IntegerField()
-    longnamel = models.CharField(max_length=128)
+    longname1 = models.CharField(max_length=128)
     price1 = models.FloatField()
     marketprice1 = models.FloatField()
 

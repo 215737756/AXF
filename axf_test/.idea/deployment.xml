@@ -2,23 +2,17 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="root@172.16.11.61:22 password" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="root@172.16.11.61:22">
+      <paths name="git">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/root/Qianfeng/axf_test" local="$PROJECT_DIR$/../AXF/axf_test" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="root@172.16.11.61:22 password">
         <serverdata>
           <mappings>
-            <mapping deploy="/root/Qianfeng/axf_test" local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="root@172.16.11.61:22 password (1)">
-        <serverdata>
-          <mappings>
+            <mapping deploy="/root/Qianfeng/axf_test" local="$PROJECT_DIR$/../AXF/axf_test" />
             <mapping deploy="/root/Qianfeng/axf_test" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>

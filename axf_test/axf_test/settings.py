@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -23,8 +25,8 @@ SECRET_KEY = '!e7k*gfx50r2n#u6$6%+b-iayv$h*1a_#@=uoi41qu!=s5i%r#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['*']
+# DEBUG = False
+ALLOWED_HOSTS = ['172.16.11.61', '*', ]
 
 # Application definition
 
@@ -46,7 +48,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -85,7 +87,8 @@ DATABASES = {
         'NAME': 'AXF_shop',
         'USER': 'tlc',
         'PASSWORD': 'Mysql666!',
-        'HOST': '172.16.11.61',
+        # 'HOST': '192.168.28.61', #house
+        'HOST': '172.16.11.61',  # corp
         'PORT': '3306',
         'TEST': {
             'NAME': 'AXF_test'
@@ -127,7 +130,29 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
+# 加载静态资源
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+# 邮箱的服务器地址
+EMAIL_HOST = 'smtp.163.com'
+# smtp.163.com 默认端口号就是25 可写可不写 465
+EMAIL_USE_SSL = True  # 阿里云将25端口占用了，将端口修改为465，EMAIL_USE_SSL 改为True
+EMAIL_PORT = 465
+# 发送者的邮箱
+EMAIL_HOST_USER = 'TianLiuChun@163.com'
+# 授权码  授权码不代表密码
+EMAIL_HOST_PASSWORD = 'FOHZKVWNPOHEQZRT'
+
+CACHES = {
+    'default': {
+        # 指定缓存类型
+        'BACKEND': 'django_redis.cache.RedisCache',
+        # 缓存位置
+        'LOCATION': 'redis://:Redis666!@127.0.0.1:6379/1'
+
+    }
+}
