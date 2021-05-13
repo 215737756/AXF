@@ -7,5 +7,13 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.16.11.61:3306/AXF_shop</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="13adc0ed-0554-42e0-bc7e-6d1ab776391f">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/axf_test/settings.py</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://172.16.11.61:3306/AXF_shop</jdbc-url>
+    </data-source>
   </component>
 </project>
